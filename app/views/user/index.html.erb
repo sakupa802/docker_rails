@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul>
+  <li><%= link_to 'ユーザ一覧', home_path %></li>
+  <li><%= link_to 'プロフィール', home_path %></li>
+  <li><%= link_to 'ログアウト', home_path, method: :delete %></li>
+  <% else %>
+  <li><%= link_to 'ログイン', home_path %></li>
+  <li><%= link_to 'アカウント作成', home_path %></li>
+</ul>
+
+<hr>
+
+<%= yield %>
+
+</body>
+</html>
