@@ -1,1 +1,13 @@
-<%= @msg %>
+<h1>商品リスト</h1>
+<table border="1">
+  <tr>
+    <th>No</th>
+    <th>商品名</th>
+  </tr>
+  <% @users.each.with_index(1) do |user, i| %>
+  <tr>
+    <td><%= "#{i}" %></td>
+    <td><%= user.name %></td>
+  </tr>
+  <% end %>
+</table>
